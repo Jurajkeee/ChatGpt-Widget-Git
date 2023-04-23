@@ -13,7 +13,7 @@ async function chat(message) {
     console.log(message)
 
     const configuration = new Configuration({
-        apiKey: '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',
+        apiKey: '',
       });
       const openai = new OpenAIApi(configuration);
 
