@@ -3,19 +3,10 @@ require('dotenv').config();
 
 let MY_NAME = "AI";
 const PORT = process.env.PORT;
+const API = process.env.OPENAI_API_KEY;
 
 
-const express = require('express');
-const app = express();
-const PORT = process.env.PORT || 3000;
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
-
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
 const { Configuration, OpenAIApi } = require("openai");
 
 async function chat(message) {
@@ -23,7 +14,7 @@ async function chat(message) {
     console.log(message)
 
     const configuration = new Configuration({
-        apiKey: '',
+        apiKey: API,
       });
       const openai = new OpenAIApi(configuration);
 

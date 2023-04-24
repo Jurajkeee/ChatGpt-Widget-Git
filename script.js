@@ -1,5 +1,5 @@
 //ws config
-const SERVER_IP = '176.117.186.175'; 
+const SERVER_IP = 'localhost'; 
 const PORT = 3000; 
 //ws config
 
